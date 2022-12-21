@@ -4,12 +4,10 @@
 import numpy
 from random import randint
 
-a = numpy.array([
-        [53,512,12],
-        [43,23,63],
-        [543,35,13]])
 
-print(f'Вот созданный массив 3х3:\n{a}')
+a = numpy.array([[randint(1, 100) for i in range(3)] for j in range(3)])
+
+print(f'Вот созданный массив 3х3 со случайными значениями:\n{a}')
 
 a = a.transpose()
 print(f'Вот этот массив 3х3 после транспонирования:\n{a}')
