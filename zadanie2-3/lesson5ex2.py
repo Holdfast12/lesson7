@@ -14,7 +14,9 @@ def summ_of_args(*args):
             t_strings += i
     return t_numbers, t_strings
 
-
+"""Получаем от пользователя параметры в переменную parameters
+и пытаемся частично или полностью преобразовать элементы в числа
+"""
 parameters = input('Введите параметры через пробел, чтобы получить их сумму: ').split()
 for i in range(len(parameters)):
     try:
