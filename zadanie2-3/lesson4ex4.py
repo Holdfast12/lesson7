@@ -51,15 +51,15 @@ while True:
                 inventory[action2] = [action3, 1]
                 print(f'Добавлено {action2} 1 шт.')
             else:
-                print(f'Достигнут предел веса инвентаря,\
-                        разместить {action2} весом {action3} грамм не удастся')
+                print(f'Достигнут предел веса инвентаря, \
+разместить {action2} весом {action3} грамм не удастся')
         else:
             if summ_inventory() + inventory[action2][0] <= max_inventory:
                 inventory[action2][1] += 1
                 print(f'Добавлено {action2} 1 шт.')
             else:
-                print(f'Достигнут предел веса инвентаря,\
-                        разместить {action2} весом {inventory[action2][0]} грамм не удастся')
+                print(f'Достигнут предел веса инвентаря, \
+разместить {action2} весом {inventory[action2][0]} грамм не удастся')
     elif action1 == '2':
         action2 = input('Введите имя предмета,\
                 который вы хотите удалить из инвентаря: ')
