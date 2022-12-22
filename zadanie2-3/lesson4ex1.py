@@ -9,7 +9,7 @@ l = list(map(lambda n: float(n) if '.' in n else int(n),
 
 def sort_list(t):
     """Функция, которая принимает на вход список чисел
-    и возвращает отсортированный список
+    и возвращает его отсортированным
     """
     t_list = t.copy()
     for i in range(len(t_list)):
