@@ -1,30 +1,31 @@
 #!/usr/bin/python3
-#Написать функцию, принимающую сколько угодно параметров (в том числе и 0) и возвращающую их сумму.
+# -*- coding: utf-8 -*-
+# Написать функцию, принимающую сколько угодно параметров (в том числе и 0) и возвращающую их сумму.
 
-def summa(*args):
-    '''Функция, принимающая сколько угодно числовых и текстовых параметров
+def summ_of_args(*args):
+    """Функция, принимающая сколько угодно числовых и текстовых параметров
     (в том числе и 0) и возвращающая их суммы.
-    '''
-    t_chisel = 0
-    t_strok = ''
+    """
+    t_numbers = 0
+    t_strings = ''
     for i in args:
         if type(i) == int or type(i) == float:
-            t_chisel += i
+            t_numbers += i
         elif type(i) == str:
-            t_strok += i
-    return t_chisel, t_strok
+            t_strings += i
+    return t_numbers, t_strings
 
 
-parametri = input('Введите параметры через пробел, чтобы получить их сумму: ').split()
-for i in range(len(parametri)):
+parameters = input('Введите параметры через пробел, чтобы получить их сумму: ').split()
+for i in range(len(parameters)):
     try:
-        parametri[i] = float(parametri[i]) if '.' in parametri[i] else int(parametri[i])
+        parameters[i] = float(parameters[i]) if '.' in parameters[i] else int(parameters[i])
     except ValueError:
-        print(f'Параметр {parametri[i]} будет принят как текстовый')
+        print(f'Параметр {parameters[i]} будет принят как текстовый')
 
-summa_chisel, summa_strok = summa(*parametri)
+summ_of_numbers, summ_of_strings = summ_of_args(*parameters)
 
 print(f'=======================================\n'
         + f'Для введенных параметров\n'
-        + f'\tсумма чисел будет равна: {summa_chisel}\n'
-        + f'\tсумма строк будет такой: {summa_strok}')
+        + f'\tсумма чисел будет равна: {summ_of_numbers}\n'
+        + f'\tсумма строк будет такой: {summ_of_strings}')
