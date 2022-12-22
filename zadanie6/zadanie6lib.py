@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*-
 """Библиотека с моими функциями"""
 
 def greet(name):
