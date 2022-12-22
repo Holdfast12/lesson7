@@ -26,7 +26,7 @@ for i in range(len(parameters)):
 
 summ_of_numbers, summ_of_strings = summ_of_args(*parameters)
 
-print(f'=======================================\n'
-        + f'Для введенных параметров\n'
-        + f'\tсумма чисел будет равна: {summ_of_numbers}\n'
-        + f'\tсумма строк будет такой: {summ_of_strings}')
+print(f'=======================================\n\
+        Для введенных параметров\n\
+        \tсумма чисел будет равна: {summ_of_numbers}\n\
+        \tсумма строк будет такой: {summ_of_strings}')
